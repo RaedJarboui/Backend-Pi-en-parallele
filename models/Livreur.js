@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
+const deliverymanSchema = new Schema({
   username: {
     type: String,
     required: [true, 'Username required'],
@@ -39,7 +39,7 @@ const userSchema = new Schema({
   role: {
     type: String,
     require: [true, 'unidentified role'],
-    enum: ['admin', 'user', 'company', 'deliveryMan'],
+    enum: ['deliveryMan'],
   },
   id_company: {
     type: String,
@@ -53,4 +53,4 @@ const userSchema = new Schema({
   },*/
 });
 
-module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.model('deliveryman', deliverymanSchema);
